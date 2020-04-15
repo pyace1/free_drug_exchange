@@ -1,0 +1,72 @@
+<! DOCTYPE html>
+	<html>
+		<head>
+			<title>razmena neiskoriscenih lekova</title>
+			<meta charset="utf-8">
+			<link rel="stylesheet" href="styles.css" />
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+			<script src="slippry-1.4.0/dist/slippry.min.js"></script>
+			<link rel="stylesheet" href="slippry-1.4.0/dist/slippry.css" />
+			<link href="lightbox2-2.11.1/dist/css/lightbox.css" rel="stylesheet" />
+			<script src="main.js"></script>
+		</head>
+	
+		<body>
+		  <h1 style="margin-top:50px;">Dobrovoljna razmena neiskoriscenih lekova !!!</h1><br/><hr>
+		  <h2>Molim vas da dobro procitate uslove koriscenja sajta na dnu stranice !<br/>Stranica je namenjena samo onima koji su voljni da poklone medikament, znaci bez ikakve nadoknade ,novcane ,materijalne ...</h2>
+		  <p>Budi human, spasi zivot, malo tebi je mozda puno nekom drugom ...</p><br/>
+		  <ul id="slippry-demo">
+			  <li>
+				<a href="#slide1"><img src="slippry-1.4.0/demo/img/image-5.jpg" alt="Dobrodosli dobri ljudi!"></a>
+			  </li>
+			  <li>
+				<a href="#slide2"><img src="slippry-1.4.0/demo/img/image-6.jpeg"  alt="Ovo je nas nacin da pokazemo humanost."></a>
+			  </li>
+			  <li>
+				<a href="#slide3"><img src="slippry-1.4.0/demo/img/image-7.jpg" alt="Djura"></a>
+			  </li>
+			</ul>
+		  <h2>Za lek se ne kaze hvala !!!</h2><br/><hr>
+		  <label for="lek" >Ime medikamenta (leka)ili pomagala i proizvodjac :</label><br/>
+		  <input type="text" style="width:250px;" id="lek" placeholder="Ime leka (Andol) ,proizvodjac (Galenika)"><br/>
+		  <label for="rok">Rok trajanja : (Molimo vas napisite datum jasno !)</label><br/>
+		  <input type="text" style="width:210px;" id="rok" placeholder="Rok trajanja ,npr. (23.mart.2023.)"><br/>
+		  <label for="kolicina">Kolicina : </label><br/>
+		  <input type="text" style="width:190px;" id="kolicina" placeholder="10 tableta ili 4 ampule injekcija"><br/>		  
+		  <label for="ime">Ime i prezime darodavca :</label><br/>
+		  <input type="text" id="ime" placeholder="Petar Petrovic"><br/>
+		  <label for="jmbg">Broj licne karte ili jmbg darodavca (ovo polje nece biti javno objavljeno,ali je obavezno iz bezbednosnih razloga):</label><br/>
+		  <input type="text" id="jmbg" placeholder="npr. 01019090150000"><br/>
+		  <label for="kontakt">Broj telefona i email darodavca :</label><br/>
+		  <input type="text" id="telefon" placeholder="+381 17 5555 555"><input type="text" id="email" placeholder="petar_petrovic@yahoo.com"><br/>
+		  <label for="lokacija">Lokacija darodavca i mogucnost slanja medikamenta(npr. PostExpress,AKS...):</label></br>
+		  <input type="text" id="lokacija" placeholder="Surdulica"><input type="text" id="slanje" placeholder="licno preuzimanje ili AKS"><br/>
+		  <label for="napomena">Napomena (bilo kog tipa, vezana za medikament ili darodavca):</label><br/>
+		  <textarea id="napomena" rows="4" cols="80">Napomena nekad moze biti od kljucne vaznosti za krajnjeg korisnika ! Takodje moze sadrzati informacije koje nisu obuhvacene nasim upitnim formularom !
+			</textarea>
+		  <button type="button" onclick="unos()">Unesi medikament u bazu</button><br/>
+		  
+		  <div id="stampa"></div>
+		  <p>Molimo popunite tabelu sto tacnije. Unesite sve podatke, ime, proizvodjaca, rok trajanja i poreklo. 
+		  Molim vas da medikamente koje nudite ,garantujete za njihovo pravilno skladistenje ,u naznacenim 
+		  temperaturnim okvirima i van suncevih zrakova. Takodje ako su navedeni posebni uslovi po 
+		  proizvodjackoj specifikaciji da ste ispostovali te mere skladistenja. Da ne bi doslo do nekih nezeljenih 
+		  dejstava i sutra neprijatnih situacija, sudskih gonjenja ,itd. Funkcija samog sajta je pronalazenje osoba 
+		  koje imaju na stanju nepotrebne medikamente sa osobama kojima su ti medikamenti potrebni ,a u isto vreme su 
+		  u nemogucnosti da ih pronadju ili priuste iz bilo kog razloga. Ovim uslovima koriscenja sajta 
+		  ,mi kreatori istoga se ogranicavamo od svakog vida odgovornosti medjusobne razmene medikamenata. 
+		  Ali takodje molimo sve korisnike da se pridrzavaju istog pravilnika i da ne zloupotrebljavaju sajt ni na koji nacin.
+		  U suprotnom,nas tim ce sankcionisati svaku nepravilnost,a organi reda ce sankcionisati ozbiljne prestupe 
+		  po pravilima naseg zakona. Oglas ce biti automatski obrisan posle 60 dana,radi rasterecenja baze podataka 
+		  ,a istovremeno zbog predostroznosti isteka roka vazenja.</p><hr>
+		  <a href="sun.jpg" data-lightbox="roadtrip" ><img class="example-image" src="sun.jpg" height="120px" alt=""/></a>
+		  <a href="flower.jpeg" data-lightbox="roadtrip"><img class="example-image" src="flower.jpeg" height="120px" alt=""/></a>
+		  <a href="images.jpg" data-lightbox="roadtrip"><img class="example-image" src="images.jpg" height="120px" alt=""/></</a>
+		  <a href="pocket.jpg" data-lightbox="roadtrip"><img class="example-image" src="pocket.jpg" height="120px" alt=""/></a>
+		  <a href="reci.jpg" data-lightbox="roadtrip"><img class="example-image" src="reci.jpg" height="120px" alt=""/></a>
+		  <a href="razbacano.jpg" data-lightbox="roadtrip"><img class="example-image" src="razbacano.jpg" height="120px" alt=""/></a><br/><hr>
+		  <p style="font-size:12px; text-align:right; color:red;"><em>Copyright © Aleksandar Tomovic and Impala Studio 2020</em></p>
+			
+			<script src="lightbox2-2.11.1/dist/js/lightbox.js"></script>
+		</body>
+	</html>
