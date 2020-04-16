@@ -5,3 +5,4 @@ $(document).ready(function(){
 //srecan ti rodjendan dzohusafet
 //dje si aco skupljacu vintage satova
 //evo tu sam Joco frajeru sa citizenom
+//eco drive + automatic diver
