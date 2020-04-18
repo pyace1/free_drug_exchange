@@ -27,12 +27,20 @@
 			  </li>
 			</ul>
 		  <h2 style="text-align:center;">Za lek se ne kaze hvala !!!</h2><br/><hr>
-		  <label for="lek" >Ime medikamenta (leka)ili pomagala i proizvodjac :</label><br/>
+		  <label for="lek" >Ime medikamenta (leka) ili pomagala i proizvodjac :</label><br/>
 		  <input type="text" style="width:250px;" id="lek" placeholder="Ime leka (Andol) ,proizvodjac (Galenika)"><br/>
 		  <label for="rok">Rok trajanja : (Molimo vas napisite datum jasno !)</label><br/>
 		  <input type="text" style="width:210px;" id="rok" placeholder="Rok trajanja ,npr. (23.mart.2023.)"><br/>
-		  <label for="kolicina">Kolicina : </label><br/>
-		  <input type="text" style="width:290px;" id="kolicina" placeholder="10 tableta , 4 ampule injekcija ili 3 pakovanja ..."><br/>		  
+		  <label for="kolicina">Kolicina : (Npr.: 10 tableta , 4 ampule injekcija ili 3 pakovanja ...)</label><br/>
+		  <input type="text" id="kolicina" placeholder="broj - kolicina"> &nbsp; <label for="produkt">Izaberi :</label>
+		  <select id="produkt">
+			  <option value="tableta">Tableta</option>
+			  <option value="kutija">Kutija</option>
+			  <option value="ampula">Ampula</option>
+			  <option value="injekcija">Injekcija</option>
+			  <option value="gel">Gel</option>
+			  <option value="drugo">Nesto drugo ...</option>
+			</select><br/>		  
 		  <label for="ime">Ime i prezime darodavca :</label><br/>
 		  <input type="text" id="ime" placeholder="Petar Petrovic"><br/>
 		  <label for="jmbg">Broj licne karte ili jmbg darodavca (ovo polje nece biti javno objavljeno,ali je obavezno iz bezbednosnih razloga):</label><br/>
@@ -40,7 +48,9 @@
 		  <label for="kontakt">Broj telefona i email darodavca :</label><br/>
 		  <input type="text" id="telefon" placeholder="+381 17 5555 555"> &nbsp; <input type="text" id="email" placeholder="petar_petrovic@yahoo.com"><br/>
 		  <label for="lokacija">Lokacija darodavca i mogucnost slanja medikamenta(npr. licno preuzimanje, obicnom postom, PostExpress, AKS, DHL...):</br>Napomena: Imajte u vidu da je slanje medikamenata u inostranstvo zabranjeno u nekim zemljama iz razloga neusaglasenosti farmaceutskih zakona ...</label></br>
-		  <input type="text" id="lokacija" placeholder="Surdulica"> &nbsp; <input type="text" id="slanje" placeholder="licno preuzimanje ili AKS"><br/>
+		  <input type="text" id="lokacija" placeholder="Surdulica"> &nbsp; <label for="slanje">Nacin slanja : </label><input type="checkbox" id="licno" name="licno" value="licno"><label for="licno"> Licno preuzimanje</label> &nbsp; <input type="checkbox" id="posta" name="posta" value="posta"><label for="posta"> Obicna posta<label>
+		   &nbsp; <input type="checkbox" id="express" name="express" value="express"><label for="express"> Post express</label> &nbsp; <input type="checkbox" id="aks" name="aks" value="aks"><label for="aks"> AKS<label> &nbsp; <input type="checkbox" id="bex" name="bex" value="bex"><label for="bex"> BEX</label> &nbsp; <input type="checkbox" id="dhl" name="dhl" value="dhl"><label for="dhl"> DHL<label> &nbsp; <input type="text" style="width:170px;" id="slanje_o" placeholder=" ... neki drugi vid dostave !"><br/>
+		  <label style="text-decoration:underline; color:red;" for="da">Snosim moralnu odgovornost i potvrdjujem da je medikament ispravan za koriscenje !</label><input type="radio" id="da" name="potvrda" value="da"> &nbsp; <label for="ne">Nisam siguran u ispravnost medikamenta !</label><input type="radio" id="ne" name="potvrda" value="ne"><br/>
 		  <label for="napomena">Napomena (bilo kog tipa, vezana za medikament ili darodavca):</label><br/>
 		  <textarea id="napomena" rows="4" cols="80" >Napomena nekad moze biti od kljucne vaznosti za krajnjeg korisnika ! Takodje moze sadrzati informacije koje nisu obuhvacene nasim upitnim formularom ! Nacin upotrebe ...
 			</textarea>
