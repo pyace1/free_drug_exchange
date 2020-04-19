@@ -4,7 +4,16 @@ $(document).ready(function(){
 });
 var lista = [];
 function unos(){
-	document.getElementById("stampa").innerHTML = " ";
+	document.getElementById("stampa").innerHTML = "";
+	
+		var inputSlanje = document.getElementsByClassName("mybox");
+		var checkedValue = "";
+		for(var i=0; inputSlanje.length; i++){
+			  if(inputSlanje[i].checked){
+				   checkedValue += inputSlanje[i].value;
+			}
+		}
+		console.log(checkedValue);
 	var medikament = {
 		lek : document.getElementById("lek").value,
 		rok : document.getElementById("rok").value,
@@ -18,6 +27,8 @@ function unos(){
 		slanje : document.getElementsByClassName("mybox").value,
 		opciono_slanje : document.getElementById("opciono_slanje").value,
 		napomena : document.getElementById("napomena").value,
+		//var checkedValue = null; 
+
 	}
 	lista.push(medikament);
 	console.log(lista);
