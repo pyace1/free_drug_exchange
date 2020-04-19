@@ -8,9 +8,11 @@ function unos(){
 	
 		var inputSlanje = document.getElementsByClassName("mybox");
 		var checkedValue = "";
-		for(var i=0; inputSlanje.length; i++){
+		
+		for(var i=0; i<inputSlanje.length; i++){
+			//console.log(inputSlanje[i].checked);
 			  if(inputSlanje[i].checked){
-				   checkedValue += inputSlanje[i].value;
+				   checkedValue += inputSlanje[i].value+"<br>";
 			}
 		}
 		console.log(checkedValue);
