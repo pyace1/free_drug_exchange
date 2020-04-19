@@ -16,6 +16,7 @@ function unos(){
 			}
 		}
 		console.log(checkedValue);
+		validateForm();
 	var medikament = {
 		lek : document.getElementById("lek").value,
 		rok : document.getElementById("rok").value,
@@ -40,5 +41,48 @@ function unos(){
 	lista[i].produkt +  "<br/><br/>" + lista[i].ime + " ," + lista[i].telefon + " ," + lista[i].email + " ,<strong>" + lista[i].lokacija + "</strong> " + 
     "<br/><br/>" + lista[i].slanje + " " + lista[i].opciono_slanje + " ," + lista[i].napomena + "<hr></div>"; 
 	}
+}
+function validateForm() {
+	var error = false;
+  if (document.getElementById("lek").value == "") {
+    document.getElementById("lek_error").innerHTML = " Ime leka je obavezno !";
+	error = true ;
+  }
+  if (document.getElementById("rok").value == "") {
+    document.getElementById("rok_error").innerHTML = " Rok leka je obavezan !";
+	error = true ;
+  }
+  if (document.getElementById("kolicina").value == "") {
+    document.getElementById("kolicina_error").innerHTML = " Kolicina je obavezna !";
+	error = true ;
+  }
+  if (document.getElementById("ime").value == "") {
+    document.getElementById("ime_error").innerHTML = " Ime je obavezno !";
+	error = true ;
+  }
+  if (document.getElementById("jmbg").value == "") {
+    document.getElementById("jmbg_error").innerHTML = " Jmbg ili broj licne karte je obavezan !";
+	error = true ;
+  }
+  if (document.getElementById("telefon").value == "") {
+    document.getElementById("telefon_error").innerHTML = " Telefon je obavezan !";
+	error = true ;
+  }
+  if (document.getElementById("email").value == "") {
+    document.getElementById("email_error").innerHTML = " Email je obavezan !";
+	error = true ;
+  }
+  if (document.getElementById("lokacija").value == "") {
+    document.getElementById("lokacija_error").innerHTML = " Lokacija je obavezna !";
+	error = true ;
+  }
+  if (checkedValue == "" && document.getElementById("opciono_slanje").value == "") {
+    document.getElementById("slanje_error").innerHTML = " Vrsta slanja je obavezna !";
+	error = true ;
+  }
+	if(error === true){
+		return false;
+	}
+  
 }
 
