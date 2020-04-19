@@ -12,7 +12,7 @@ function unos(){
 		for(var i=0; i<inputSlanje.length; i++){
 			//console.log(inputSlanje[i].checked);
 			  if(inputSlanje[i].checked){
-				   checkedValue += inputSlanje[i].value+"<br>";
+				   checkedValue += inputSlanje[i].value+" ,";
 			}
 		}
 		console.log(checkedValue);
@@ -26,7 +26,7 @@ function unos(){
 		telefon : document.getElementById("telefon").value,
 		email : document.getElementById("email").value,
 		lokacija : document.getElementById("lokacija").value,
-		slanje : document.getElementsByClassName("mybox").value,
+		slanje : checkedValue,
 		opciono_slanje : document.getElementById("opciono_slanje").value,
 		napomena : document.getElementById("napomena").value,
 		//var checkedValue = null; 
@@ -36,9 +36,9 @@ function unos(){
 	console.log(lista);
 	var i;
 	for (i=0 ; i<lista.length ; i++){
-	document.getElementById("stampa").innerHTML += "<div><strong>" + lista[i].lek + "</strong> " + lista[i].rok + " " + lista[i].kolicina + 
-	lista[i].produkt +  "<br/><br/>" + lista[i].ime + " " + lista[i].telefon + " " + lista[i].email + " <strong>" + lista[i].lokacija + "</strong> " + 
-    "<br/><br/>" + lista[i].slanje + " " + " " + lista[i].opciono_slanje + " " + lista[i].napomena + "<hr></div>"; 
+	document.getElementById("stampa").innerHTML += "<div><strong>" + lista[i].lek + "</strong> ," + lista[i].rok + ", " + lista[i].kolicina + " ," + 
+	lista[i].produkt +  "<br/><br/>" + lista[i].ime + " ," + lista[i].telefon + " ," + lista[i].email + " ,<strong>" + lista[i].lokacija + "</strong> " + 
+    "<br/><br/>" + lista[i].slanje + " " + lista[i].opciono_slanje + " ," + lista[i].napomena + "<hr></div>"; 
 	}
 }
 
