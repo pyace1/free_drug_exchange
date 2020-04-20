@@ -5,6 +5,7 @@ $(document).ready(function(){
 var lista = [];
 var checkedValue = "";
 function unos(){
+
 	document.getElementById("stampa").innerHTML = "";
 	
 		var inputSlanje = document.getElementsByClassName("mybox");
@@ -85,6 +86,11 @@ function validateForm() {
     document.getElementById("slanje_error").innerHTML = " Vrsta slanja je obavezna !";
 	error = true ;
   }
+  	var checkedNo = document.getElementById("ne").checked;
+	if(checkedNo == true){
+		document.getElementById("potvrda_error").innerHTML = " Molimo Vas da potvrdite ispravnost medikamenta !";
+		error = true ;
+	}
 	if(error === true){
 		//console.log(error);
 		return false;
