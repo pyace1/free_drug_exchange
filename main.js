@@ -3,11 +3,12 @@ $(document).ready(function(){
   $('#slippry-demo').slippry()
 });
 var lista = [];
+var checkedValue = "";
 function unos(){
 	document.getElementById("stampa").innerHTML = "";
 	
 		var inputSlanje = document.getElementsByClassName("mybox");
-		var checkedValue = "";
+		checkedValue = "";
 		
 		for(var i=0; i<inputSlanje.length; i++){
 			//console.log(inputSlanje[i].checked);
@@ -16,7 +17,10 @@ function unos(){
 			}
 		}
 		console.log(checkedValue);
-		validateForm();
+		if(validateForm()===false)
+		{
+			return false;
+		}
 	var medikament = {
 		lek : document.getElementById("lek").value,
 		rok : document.getElementById("rok").value,
@@ -77,10 +81,12 @@ function validateForm() {
 	error = true ;
   }
   if (checkedValue == "" && document.getElementById("opciono_slanje").value == "") {
+	 // console.log(checkedValue);
     document.getElementById("slanje_error").innerHTML = " Vrsta slanja je obavezna !";
 	error = true ;
   }
 	if(error === true){
+		//console.log(error);
 		return false;
 	}
   
