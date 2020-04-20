@@ -33,7 +33,7 @@
 		  <label for="rok">Rok trajanja : (Molimo vas napisite datum jasno !)</label><br/>
 		  <input type="text" style="width:210px;" id="rok" placeholder="Rok trajanja ,npr. (23.mart.2023.)"><span id="rok_error" style="color:red;"></span><br/>
 		  <label for="kolicina">Kolicina : (Npr.: 10 tableta , 4 ampule injekcija ili 3 pakovanja ...)</label><br/>
-		  <input type="text" id="kolicina" placeholder="broj - kolicina"><span id="kolicina_error" style="color:red;"></span> &nbsp; <label for="produkt">Izaberi :</label>
+		  <input type="number" min="1" id="kolicina" placeholder="broj - kolicina"><span id="kolicina_error" style="color:red;"></span> &nbsp; <label for="produkt">Izaberi :</label>
 		  <select id="produkt">
 			  <option value="tableta">Tableta</option>
 			  <option value="kutija">Kutija</option>
@@ -45,13 +45,13 @@
 		  <label for="ime">Ime i prezime darodavca :</label><br/>
 		  <input type="text" id="ime" placeholder="Petar Petrovic"><span id="ime_error" style="color:red;"></span><br/>
 		  <label for="jmbg">Broj licne karte ili jmbg darodavca (ovo polje nece biti javno objavljeno,ali je obavezno iz bezbednosnih razloga):</label><br/>
-		  <input type="text" id="jmbg" placeholder="npr. 01019090150000"><span id="jmbg_error" style="color:red;"></span><br/>
+		  <input type="number" id="jmbg" placeholder="npr. 01019090150000"><span id="jmbg_error" style="color:red;"></span><br/>
 		  <label for="telefon">Broj telefona i email darodavca :</label><br/>
-		  <input type="text" id="telefon" placeholder="+381 17 5555 555"><span id="telefon_error" style="color:red;"></span> &nbsp; <input type="text" id="email" placeholder="petar_petrovic@yahoo.com"><span id="email_error" style="color:red;"></span><br/>
+		  <input type="number" id="telefon" placeholder="+381 17 5555 555"><span id="telefon_error" style="color:red;"></span> &nbsp; <input type="text" id="email" placeholder="petar_petrovic@yahoo.com"><span id="email_error" style="color:red;"></span><br/>
 		  <label for="lokacija">Lokacija darodavca i mogucnost slanja medikamenta(npr. licno preuzimanje, obicnom postom, PostExpress, AKS, DHL...):</br>Napomena: Imajte u vidu da je slanje medikamenata u inostranstvo zabranjeno u nekim zemljama iz razloga neusaglasenosti farmaceutskih zakona ...</label></br>
 		  <input type="text" id="lokacija" placeholder="Surdulica"><span id="lokacija_error" style="color:red;"></span> &nbsp; <label for="mybox">Nacin slanja : </label><input type="checkbox" class="mybox" name="mybox" value="licno"><label for="licno"> Licno preuzimanje</label> &nbsp; <input type="checkbox" class="mybox" name="mybox" value="posta"><label for="posta"> Obicna posta</label>
 		   &nbsp; <input type="checkbox" class="mybox" name="mybox" value="express"><label for="express"> Post express</label> &nbsp; <input type="checkbox" class="mybox" name="mybox" value="aks"><label for="aks"> AKS</label> &nbsp; <input type="checkbox" class="mybox" name="mybox" value="bex"><label for="bex"> BEX</label> &nbsp; <input type="checkbox" class="mybox" name="mybox" value="dhl"><label for="dhl"> DHL<label> &nbsp; <input type="text" name="mybox" style="width:170px;" id="opciono_slanje" placeholder=" ... neki drugi vid dostave !"><span id="slanje_error" style="color:red;"></span><br/>
-		  <label style="text-decoration:underline; color:red;" for="da">Snosim moralnu odgovornost i potvrdjujem da je medikament ispravan za koriscenje !</label><input type="radio" id="da" name="potvrda" value="da"> &nbsp; <label for="ne">Nisam siguran u ispravnost medikamenta !</label><input type="radio" checked id="ne" name="potvrda" value="ne" ><span id="potvrda_error" style="color:red;"></span><br/>
+		  <label style="text-decoration:underline; color:red;" for="da">Snosim moralnu odgovornost i potvrdjujem da je medikament ispravan za koriscenje !</label><input type="radio" id="da" name="potvrda" value="da"> &nbsp;  &nbsp; <label for="ne">   Nisam siguran u ispravnost medikamenta !</label><input type="radio" checked id="ne" name="potvrda" value="ne" ><span id="potvrda_error" style="color:red;"></span><br/>
 		  <label for="napomena">Napomena (bilo kog tipa, vezana za medikament ili darodavca...nacin upotrebe...):</label><br/>
 		  <textarea id="napomena" rows="4" cols="80" >Napomena nekad moze biti od kljucne vaznosti za krajnjeg korisnika ! Takodje moze sadrzati informacije koje nisu obuhvacene nasim upitnim formularom ! Nacin upotrebe ...
 			</textarea>

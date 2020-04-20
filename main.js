@@ -49,6 +49,17 @@ function unos(){
 }
 function validateForm() {
 	var error = false;
+	document.getElementById("lek_error").innerHTML = "";
+	document.getElementById("rok_error").innerHTML = "";
+	document.getElementById("kolicina_error").innerHTML = "";
+	document.getElementById("ime_error").innerHTML = "";
+	document.getElementById("jmbg_error").innerHTML = "";
+	document.getElementById("telefon_error").innerHTML = "";
+	document.getElementById("email_error").innerHTML = "";
+	document.getElementById("lokacija_error").innerHTML = "";
+	document.getElementById("slanje_error").innerHTML = "";
+	document.getElementById("potvrda_error").innerHTML = "";
+	
   if (document.getElementById("lek").value == "") {
     document.getElementById("lek_error").innerHTML = " Ime leka je obavezno !";
 	error = true ;
@@ -60,6 +71,11 @@ function validateForm() {
   if (document.getElementById("kolicina").value == "") {
     document.getElementById("kolicina_error").innerHTML = " Kolicina je obavezna !";
 	error = true ;
+  }
+
+  if (document.getElementById("kolicina").value < 1) {
+	 document.getElementById("kolicina_error").innerHTML = " Kolicina mora biti 1 ili vise!";
+	 error = true ;
   }
   if (document.getElementById("ime").value == "") {
     document.getElementById("ime_error").innerHTML = " Ime je obavezno !";
@@ -73,10 +89,18 @@ function validateForm() {
     document.getElementById("telefon_error").innerHTML = " Telefon je obavezan !";
 	error = true ;
   }
+  
   if (document.getElementById("email").value == "") {
     document.getElementById("email_error").innerHTML = " Email je obavezan !";
 	error = true ;
   }
+  else {
+	 if ( ValidateEmail(document.getElementById("email").value)== false){
+		    document.getElementById("email_error").innerHTML = " Email nije u ispravnom formatu !";
+			error = true ;
+	 }
+	  
+	  }
   if (document.getElementById("lokacija").value == "") {
     document.getElementById("lokacija_error").innerHTML = " Lokacija je obavezna !";
 	error = true ;
@@ -97,4 +121,13 @@ function validateForm() {
 	}
   
 }
+function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+  {
+    return true;
+  }
+    return false;
+}
+
 
